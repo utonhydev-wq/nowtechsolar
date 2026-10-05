@@ -1,0 +1,111 @@
+import fs from 'fs';
+import { Resvg } from '@resvg/resvg-js';
+
+// Ultra-precise vector recreation of IMG-20261005-WA0102(1).jpg
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" fill="none">
+  <defs>
+    <!-- Blue Triangle Gradient -->
+    <linearGradient id="triangleBlue" x1="120" y1="80" x2="310" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="35%" stop-color="#0EA5E9" />
+      <stop offset="75%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+
+    <!-- White / Silver Swoosh Gradient -->
+    <linearGradient id="swooshWhite" x1="60" y1="180" x2="300" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+
+    <!-- Tech Blue for TECH text -->
+    <linearGradient id="techBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <filter id="subtleAura" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284C7" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Deep contrast background matching the uploaded image -->
+  <rect width="1000" height="420" rx="32" fill="#0A0E17" />
+
+  <g filter="url(#subtleAura)">
+    <!-- 1. ICON SYMBOL (Left) -->
+    <!-- Blue Rounded Triangle -->
+    <path 
+      d="M 140 110 
+         L 140 310 
+         Q 140 334 162 322 
+         L 326 218 
+         Q 342 210 326 202 
+         L 162 98 
+         Q 140 86 140 110 Z" 
+      fill="url(#triangleBlue)" 
+    />
+
+    <!-- White Curved Swoosh looping from exterior left and sweeping across lower triangle -->
+    <path 
+      d="M 140 230
+         C 112 230 82 218 82 190
+         C 82 162 112 150 140 150
+         C 156 150 162 155 162 163
+         C 162 171 156 174 140 174
+         C 123 174 104 182 104 190
+         C 104 198 123 206 140 206
+         C 165 206 204 216 250 216
+         C 295 216 324 232 336 244
+         C 318 272 270 308 212 328
+         C 190 336 168 318 168 298
+         C 168 282 190 270 206 264
+         C 238 252 276 244 302 238
+         C 268 220 216 212 174 212
+         C 156 212 146 230 140 230 Z" 
+      fill="url(#swooshWhite)" 
+    />
+
+    <!-- 2. "Now" in Bold White -->
+    <text x="375" y="235" 
+          font-family="'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif" 
+          font-size="132" 
+          font-weight="900" 
+          fill="#FFFFFF" 
+          letter-spacing="-0.04em">Now</text>
+
+    <!-- Extended bar of the T in TECH reaching over the 'w' of Now -->
+    <path d="M 648 138 L 748 138 Q 752 138 752 146 L 752 156 Q 752 162 746 162 L 712 162 L 712 232 Q 712 238 704 238 L 688 238 Q 680 238 680 232 L 680 162 L 648 162 Q 640 162 640 150 Q 640 138 648 138 Z" fill="url(#techBlue)" />
+
+    <!-- "ECH" of TECH in Tech Blue -->
+    <text x="736" y="235" 
+          font-family="'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif" 
+          font-size="132" 
+          font-weight="900" 
+          fill="url(#techBlue)" 
+          letter-spacing="-0.02em">ECH</text>
+
+    <!-- "ENERGIA SOLAR" in Clean Modern Spaced Caps -->
+    <text x="380" y="296" 
+          font-family="'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif" 
+          font-size="38" 
+          font-weight="600" 
+          fill="#FFFFFF" 
+          letter-spacing="0.32em">ENERGIA SOLAR</text>
+  </g>
+</svg>`;
+
+fs.writeFileSync('./public/nowtech_logo_horizontal.svg', svgContent);
+
+const resvg = new Resvg(svgContent, {
+  fitTo: {
+    mode: 'width',
+    value: 1000,
+  },
+});
+const pngData = resvg.render();
+const pngBuffer = pngData.asPng();
+
+fs.writeFileSync('./public/nowtech_logo_horizontal.png', pngBuffer);
+console.log('Successfully re-rendered /public/nowtech_logo_horizontal.png with exact logo styling and background contrast!');

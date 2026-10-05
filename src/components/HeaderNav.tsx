@@ -37,13 +37,21 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenDeck }) => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Zone 1: Brand Wordmark & Logo */}
-        <a href="#" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg p-1">
+        <a href="#" className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg p-1">
           <img
-            src={COMPANY_INFO.logoUrl}
+            src={COMPANY_INFO.logoTriangleUrl}
             alt="NowTech Energia Solar"
-            className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+            className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-md"
             referrerPolicy="no-referrer"
           />
+          <div className="flex flex-col text-left">
+            <span className="text-base sm:text-lg font-black tracking-tight leading-none text-white">
+              NOW<span className="text-orange-500">TECH</span>
+            </span>
+            <span className="text-[8px] sm:text-[9px] tracking-[0.22em] font-bold text-sky-300 leading-tight uppercase mt-0.5">
+              Energia Solar
+            </span>
+          </div>
         </a>
 
         {/* Zone 2: Navigation Links (Desktop) */}

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <defs>
+    <!-- Blue Triangle Gradient -->
+    <linearGradient id="blueGrad" x1="120" y1="60" x2="420" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00BAFF" />
+      <stop offset="35%" stop-color="#008FFF" />
+      <stop offset="70%" stop-color="#0066EE" />
+      <stop offset="100%" stop-color="#004AD6" />
+    </linearGradient>
+
+    <!-- Orange Loop / Swoosh Gradient -->
+    <linearGradient id="orangeGrad" x1="50" y1="160" x2="420" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF9E00" />
+      <stop offset="30%" stop-color="#FF7300" />
+      <stop offset="75%" stop-color="#FF4800" />
+      <stop offset="100%" stop-color="#E52D00" />
+    </linearGradient>
+
+    <!-- Drop Shadow for realistic depth -->
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#002D80" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <g filter="url(#subtleGlow)">
+    <!-- 1. The Main Blue Triangle with Rounded Corners -->
+    <!-- Vertices: Top-Left (130, 65), Tip-Right (450, 250), Bottom-Left (130, 435) with smooth rounding -->
+    <path 
+      d="M 130 100 
+         L 130 400 
+         Q 130 435 160 418 
+         L 435 264 
+         Q 458 250 435 236 
+         L 160 82 
+         Q 130 65 130 100 Z" 
+      fill="url(#blueGrad)" 
+    />
+
+    <!-- 2. The Orange Swoosh / Loop -->
+    <!-- The outer loop wraps around the left corner from outside the triangle and flows as a wave across the bottom -->
+    <path 
+      d="M 130 262
+         C 90 262 52 245 52 205
+         C 52 165 92 145 130 145
+         C 150 145 158 152 158 162
+         C 158 172 148 176 130 176
+         C 108 176 82 188 82 205
+         C 82 222 108 234 130 234
+         C 165 234 225 248 290 248
+         C 355 248 405 278 425 298
+         C 400 338 335 390 245 425
+         C 215 438 185 410 185 385
+         C 185 360 215 345 240 335
+         C 285 318 340 305 380 295
+         C 335 272 265 262 205 262
+         C 170 262 145 262 130 262 Z" 
+      fill="url(#orangeGrad)" 
+    />
+  </g>
+</svg>

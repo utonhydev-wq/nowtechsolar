@@ -8,6 +8,8 @@ export const COMPANY_INFO = {
   slogan: "ENERGIA SOLAR PARA UM FUTURO MAIS INTELIGENTE",
   heroSubtitle: "Economize na sua conta de energia e invista em uma solução sustentável para sua casa ou empresa.",
   logoUrl: "https://i.postimg.cc/QNJV33p7/file-000000008e80820eb620b5d043fe024d.png",
+  logoTriangleUrl: "/logo_triangulo_nowtech.png",
+  logoHorizontalDarkUrl: "/nowtech_logo_horizontal.png",
   
   // Official Links
   whatsappUrl: "https://w.app/nowtechsolar",

@@ -16,11 +16,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
         {/* Company Official Logo Showcase */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="inline-block p-4 sm:p-5 rounded-2xl bg-slate-900/80 border border-sky-500/30 backdrop-blur-md shadow-2xl shadow-sky-900/30">
+          <div className="inline-block px-6 sm:px-10 py-4 sm:py-5 rounded-2xl sm:rounded-3xl bg-[#090E17]/95 border border-sky-400/50 backdrop-blur-xl shadow-[0_0_35px_-5px_rgba(14,165,233,0.4),0_15px_30px_-5px_rgba(0,0,0,0.7)] transition-all duration-300 hover:border-sky-300 relative overflow-hidden group">
+            {/* Contrast-enhancing radial background backlight */}
+            <div className="absolute inset-0 bg-radial from-sky-500/15 via-transparent to-transparent pointer-events-none" />
+            
             <img
-              src={COMPANY_INFO.logoUrl}
+              src={COMPANY_INFO.logoHorizontalDarkUrl}
               alt="NowTech Energia Solar"
-              className="h-14 sm:h-20 w-auto object-contain drop-shadow-md mx-auto"
+              className="h-14 sm:h-20 md:h-22 w-auto max-w-[280px] sm:max-w-sm md:max-w-md object-contain drop-shadow-[0_2px_14px_rgba(56,189,248,0.4)] mx-auto relative z-10 animate-float-slow transition-transform duration-300 group-hover:scale-[1.03]"
               referrerPolicy="no-referrer"
             />
           </div>

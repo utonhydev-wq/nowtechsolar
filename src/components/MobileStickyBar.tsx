@@ -16,7 +16,7 @@ export const MobileStickyBar: React.FC = () => {
           className="flex items-center justify-between px-5 py-3 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-black text-sm shadow-lg shadow-orange-500/25 active:scale-[0.98] transition-all"
         >
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center animate-pulse">
               <MessageCircle className="w-5 h-5 text-white" />
             </div>
             <div className="text-left">
