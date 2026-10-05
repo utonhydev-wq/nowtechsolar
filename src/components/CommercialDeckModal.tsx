@@ -30,11 +30,11 @@ export const CommercialDeckModal: React.FC<CommercialDeckModalProps> = ({ isOpen
       subtitle: "Soluções Inteligentes em Energia Solar",
       content: (
         <div className="text-center py-6">
-          <div className="inline-block p-4 rounded-2xl bg-slate-900 border border-sky-500/30 mb-6 shadow-xl">
+          <div className="inline-block p-4 sm:p-5 rounded-2xl bg-white border border-sky-200/80 mb-6 shadow-xl">
             <img
-              src={COMPANY_INFO.logoUrl}
+              src={COMPANY_INFO.logoStackedUrl}
               alt="NowTech Energia Solar"
-              className="h-16 w-auto object-contain mx-auto"
+              className="h-20 sm:h-24 w-auto object-contain mx-auto"
               referrerPolicy="no-referrer"
             />
           </div>

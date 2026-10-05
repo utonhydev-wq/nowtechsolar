@@ -10,6 +10,7 @@ export const COMPANY_INFO = {
   logoUrl: "https://i.postimg.cc/QNJV33p7/file-000000008e80820eb620b5d043fe024d.png",
   logoTriangleUrl: "/logo_triangulo_nowtech.png",
   logoHorizontalDarkUrl: "/nowtech_logo_horizontal.png",
+  logoStackedUrl: "/nowtech_logo_stacked.png",
   
   // Official Links
   whatsappUrl: "https://w.app/nowtechsolar",
