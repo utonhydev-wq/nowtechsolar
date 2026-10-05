@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-navy: #0a192f;
+    --brand-blue: #0284c7;
+    --brand-blue-deep: #0369a1;
+    --brand-orange: #ea580c;
+    --brand-orange-bright: #f97316;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom subtle solar glow and pulse utilities */
+.glow-solar {
+  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.35);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px -5px rgba(2, 132, 199, 0.35);
+}
+
+/* Solar grid background pattern */
+.bg-solar-grid {
+  background-image: radial-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-circuit-grid {
+  background-image: linear-gradient(to right, rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
