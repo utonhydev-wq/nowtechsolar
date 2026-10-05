@@ -30,11 +30,13 @@ export const CommercialDeckModal: React.FC<CommercialDeckModalProps> = ({ isOpen
       subtitle: "Soluções Inteligentes em Energia Solar",
       content: (
         <div className="text-center py-6">
-          <div className="inline-block p-4 sm:p-5 rounded-2xl bg-white border border-sky-200/80 mb-6 shadow-xl">
+          <div className="inline-block p-3 sm:p-4 rounded-2xl bg-white border border-sky-200/80 mb-6 shadow-xl overflow-hidden max-w-full">
             <img
-              src={COMPANY_INFO.logoStackedUrl}
-              alt="NowTech Energia Solar"
-              className="h-20 sm:h-24 w-auto object-contain mx-auto"
+              src={COMPANY_INFO.commercialCoverUrl}
+              alt="Apresentação Comercial NowTech Energia Solar"
+              width={480}
+              height={320}
+              className="max-h-52 sm:max-h-64 w-auto object-contain mx-auto rounded-xl transition-transform duration-200 hover:scale-[1.01]"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -303,9 +305,11 @@ export const CommercialDeckModal: React.FC<CommercialDeckModalProps> = ({ isOpen
         <div className="px-6 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-sky-900">
           <div className="flex items-center gap-3">
             <img
-              src={COMPANY_INFO.logoUrl}
+              src={COMPANY_INFO.logoTriangleUrl}
               alt="NowTech Logo"
-              className="h-7 w-auto object-contain"
+              width={28}
+              height={28}
+              className="h-7 w-7 object-contain drop-shadow-sm"
               referrerPolicy="no-referrer"
             />
             <div>

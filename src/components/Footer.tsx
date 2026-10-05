@@ -17,6 +17,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
               <img
                 src={COMPANY_INFO.logoStackedUrl}
                 alt="NowTech Energia Solar"
+                width={120}
+                height={98}
                 className="h-12 w-auto object-contain"
                 referrerPolicy="no-referrer"
               />

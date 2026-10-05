@@ -41,6 +41,8 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenDeck }) => {
           <img
             src={COMPANY_INFO.logoTriangleUrl}
             alt="NowTech Energia Solar"
+            width={40}
+            height={40}
             className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-md"
             referrerPolicy="no-referrer"
           />

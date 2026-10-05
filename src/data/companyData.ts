@@ -7,10 +7,12 @@ export const COMPANY_INFO = {
   tagline: "Soluções Inteligentes em Energia Solar",
   slogan: "ENERGIA SOLAR PARA UM FUTURO MAIS INTELIGENTE",
   heroSubtitle: "Economize na sua conta de energia e invista em uma solução sustentável para sua casa ou empresa.",
-  logoUrl: "https://i.postimg.cc/QNJV33p7/file-000000008e80820eb620b5d043fe024d.png",
+  logoUrl: "/nowtech_logo_original.png",
   logoTriangleUrl: "/logo_triangulo_nowtech.png",
   logoHorizontalDarkUrl: "/nowtech_logo_horizontal.png",
   logoStackedUrl: "/nowtech_logo_stacked.png",
+  logoStackedWhiteUrl: "/nowtech_logo_stacked_white.png",
+  commercialCoverUrl: "/nowtech_commercial_cover.png",
   
   // Official Links
   whatsappUrl: "https://w.app/nowtechsolar",
