@@ -13,13 +13,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand & Slogan Column */}
           <div className="md:col-span-2">
-            <div className="inline-block p-3 rounded-2xl bg-white border border-sky-800/40 mb-4 shadow-md">
+            <div className="inline-flex items-center justify-center p-2.5 rounded-2xl bg-white border border-sky-800/40 mb-4 shadow-md overflow-hidden">
               <img
                 src={COMPANY_INFO.logoStackedUrl}
                 alt="NowTech Energia Solar"
-                width={120}
-                height={98}
-                className="h-12 w-auto object-contain"
+                style={{ width: '93.439px', height: '96.439px' }}
+                className="object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>
