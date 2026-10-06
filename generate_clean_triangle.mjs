@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
+import fs from 'fs';
+import { Resvg } from '@resvg/resvg-js';
+
+// Exact vector recreation of image_49dff514-d49b-452e-8430-d6cc798cd235.png
+// Transparent background, exact sky-blue gradient & solar orange swoosh
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
   <defs>
     <!-- Sky Blue to Medium Azure Triangle Gradient -->
     <linearGradient id="triangleGrad" x1="180" y1="90" x2="480" y2="480" gradientUnits="userSpaceOnUse">
@@ -51,4 +56,21 @@
        C 205 298 178 315 160 315 Z" 
     fill="url(#swooshGrad)" 
   />
-</svg>
+</svg>`;
+
+const resvg = new Resvg(svgContent, {
+  fitTo: {
+    mode: 'width',
+    value: 600,
+  },
+});
+const pngData = resvg.render();
+const pngBuffer = pngData.asPng();
+
+fs.writeFileSync('./public/image_49dff514-d49b-452e-8430-d6cc798cd235.png', pngBuffer);
+fs.writeFileSync('./public/logo_triangulo_nowtech.png', pngBuffer);
+fs.writeFileSync('./public/logo_triangulo_nowtech.svg', svgContent);
+fs.writeFileSync('./src/assets/images/image_49dff514-d49b-452e-8430-d6cc798cd235.png', pngBuffer);
+fs.writeFileSync('./src/assets/images/logo_triangulo_nowtech.png', pngBuffer);
+
+console.log('Successfully generated clean transparent triangle logo matching image_49dff514-d49b-452e-8430-d6cc798cd235.png!');

@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
         <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-orange-400 mb-4 tracking-wide uppercase">
           <span className="flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/30 px-3 py-1 rounded-full text-orange-300">
             <Sun className="w-3.5 h-3.5 text-orange-400 animate-pulse" />
-            O Futuro é Agora!
+            Ganhe Dinheiro com o Sol
           </span>
           <span className="text-slate-400 hidden sm:inline">·</span>
           <span className="flex items-center gap-1 text-slate-300 bg-sky-900/40 border border-sky-700/40 px-3 py-1 rounded-full">

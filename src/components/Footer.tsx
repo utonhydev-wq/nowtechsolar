@@ -1,6 +1,7 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/companyData';
 import { Instagram, MessageCircle, MapPin, Phone, Mail, FileText, ArrowUpRight, Sun } from 'lucide-react';
+import footerLogo from '../assets/images/regenerated_image_1791297333794.jpg';
 
 interface FooterProps {
   onOpenDeck: () => void;
@@ -15,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
           <div className="md:col-span-2">
             <div className="inline-flex items-center justify-center p-2.5 rounded-2xl bg-white border border-sky-800/40 mb-4 shadow-md overflow-hidden">
               <img
-                src={COMPANY_INFO.logoStackedUrl}
+                src={footerLogo}
                 alt="NowTech Energia Solar"
                 style={{ width: '93.439px', height: '96.439px' }}
                 className="object-contain"

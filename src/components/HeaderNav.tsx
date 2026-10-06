@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { COMPANY_INFO } from '../data/companyData';
 import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
+import headerLogo from '../assets/images/image_49dff514-d49b-452e-8430-d6cc798cd235.png';
 
 interface HeaderNavProps {
   onOpenDeck: () => void;
@@ -39,7 +40,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenDeck }) => {
         {/* Zone 1: Brand Wordmark & Logo */}
         <a href="#" className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg p-1">
           <img
-            src={COMPANY_INFO.logoTriangleUrl}
+            src={headerLogo}
             alt="NowTech Energia Solar"
             width={40}
             height={40}
