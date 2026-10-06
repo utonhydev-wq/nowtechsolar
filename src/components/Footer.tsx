@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
                 href={COMPANY_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center transition-all border border-emerald-500/30"
+                className="w-10 h-10 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center transition-all duration-200 border border-emerald-500/30 hover:-translate-y-1 hover:shadow-md hover:shadow-emerald-500/20 active:translate-y-0"
                 aria-label="WhatsApp NowTech"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
                 href={COMPANY_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-rose-600/20 hover:bg-rose-600 text-rose-400 hover:text-white flex items-center justify-center transition-all border border-rose-500/30"
+                className="w-10 h-10 rounded-xl bg-rose-600/20 hover:bg-rose-600 text-rose-400 hover:text-white flex items-center justify-center transition-all duration-200 border border-rose-500/30 hover:-translate-y-1 hover:shadow-md hover:shadow-rose-500/20 active:translate-y-0"
                 aria-label="Instagram NowTech"
               >
                 <Instagram className="w-5 h-5" />
@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
                 href={COMPANY_INFO.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-sky-600/20 hover:bg-sky-600 text-sky-400 hover:text-white flex items-center justify-center transition-all border border-sky-500/30"
+                className="w-10 h-10 rounded-xl bg-sky-600/20 hover:bg-sky-600 text-sky-400 hover:text-white flex items-center justify-center transition-all duration-200 border border-sky-500/30 hover:-translate-y-1 hover:shadow-md hover:shadow-sky-500/20 active:translate-y-0"
                 aria-label="Localização no Google Maps"
               >
                 <MapPin className="w-5 h-5" />

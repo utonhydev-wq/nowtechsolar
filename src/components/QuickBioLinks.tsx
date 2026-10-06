@@ -42,7 +42,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
           href={COMPANY_INFO.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-md transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
+          className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.99]"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
@@ -59,7 +59,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
         {/* Link 3: Interactive Solar Calculator */}
         <button
           onClick={onScrollToCalculator}
-          className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-sky-50 hover:bg-sky-100/80 text-sky-950 font-bold border border-sky-200 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
+          className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-sky-50 hover:bg-sky-100/90 text-sky-950 font-bold border border-sky-200/90 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.99]"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-sky-600 text-white flex items-center justify-center shrink-0 shadow-sm">
@@ -70,13 +70,13 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
               <div className="text-xs text-sky-700 font-medium">Descubra quanto você pode economizar</div>
             </div>
           </div>
-          <span className="text-xs font-semibold px-2 py-1 bg-sky-200/70 text-sky-800 rounded-md">Simular</span>
+          <span className="text-xs font-semibold px-2.5 py-1 bg-sky-200/80 text-sky-800 rounded-lg">Simular</span>
         </button>
 
         {/* Link 4: Commercial Presentation Modal */}
         <button
           onClick={onOpenDeck}
-          className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold border border-slate-200 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
+          className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-slate-50 hover:bg-slate-100/90 text-slate-800 font-bold border border-slate-200/90 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-[0.99]"
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-700 flex items-center justify-center shrink-0">
@@ -87,7 +87,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
               <div className="text-xs text-slate-500 font-medium">Apresentação Comercial completa</div>
             </div>
           </div>
-          <span className="text-xs font-semibold px-2 py-1 bg-amber-100 text-amber-800 rounded-md">Ver PDF</span>
+          <span className="text-xs font-semibold px-2.5 py-1 bg-amber-100 text-amber-800 rounded-lg">Ver PDF</span>
         </button>
 
         {/* Link 5 & 6: Instagram & Location in 2 columns */}
@@ -96,7 +96,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
             href={COMPANY_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2.5 p-3 rounded-xl bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 border border-pink-200/60 hover:border-pink-300 text-slate-800 text-xs sm:text-sm font-bold transition-all hover:scale-[1.01]"
+            className="group flex items-center gap-2.5 p-3 rounded-xl bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50 border border-pink-200/60 hover:border-pink-300 text-slate-800 text-xs sm:text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
           >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0">
               <Instagram className="w-4 h-4" />
@@ -111,7 +111,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
             href={COMPANY_INFO.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2.5 p-3 rounded-xl bg-emerald-50/60 border border-emerald-200/70 hover:border-emerald-300 text-slate-800 text-xs sm:text-sm font-bold transition-all hover:scale-[1.01]"
+            className="group flex items-center gap-2.5 p-3 rounded-xl bg-emerald-50/60 border border-emerald-200/70 hover:border-emerald-300 text-slate-800 text-xs sm:text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
               <MapPin className="w-4 h-4" />

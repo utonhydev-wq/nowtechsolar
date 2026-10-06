@@ -75,10 +75,10 @@ export const CasesShowcase: React.FC = () => {
             <button
               key={f.id}
               onClick={() => setActiveFilter(f.id as any)}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all ${
+              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] ${
                 activeFilter === f.id
                   ? 'bg-sky-900 text-white shadow-md shadow-sky-950/20'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200/90'
               }`}
             >
               {f.label}
@@ -91,7 +91,7 @@ export const CasesShowcase: React.FC = () => {
           {filteredCases.map((item) => (
             <div
               key={item.id}
-              className="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-7 hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
+              className="bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-sky-300/80 rounded-3xl p-6 sm:p-7 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
                 {/* Visual Technical Badge */}

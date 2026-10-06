@@ -40,7 +40,7 @@ export const BenefitsSection: React.FC = () => {
           {COMPANY_INFO.benefits.map((b) => (
             <div
               key={b.category}
-              className="bg-slate-50 hover:bg-slate-100/80 border border-slate-200/80 rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between"
+              className="bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-sky-300/80 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">

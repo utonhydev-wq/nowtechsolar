@@ -93,7 +93,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenDeck }) => {
             {COMPANY_INFO.founders.map((founder) => (
               <div
                 key={founder.name}
-                className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 hover:shadow-md transition-shadow"
+                className="bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-sky-300/80 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-900 to-sky-700 text-white flex items-center justify-center font-bold text-xl shadow-md">

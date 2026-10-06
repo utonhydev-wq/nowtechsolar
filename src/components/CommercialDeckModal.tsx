@@ -346,7 +346,7 @@ export const CommercialDeckModal: React.FC<CommercialDeckModalProps> = ({ isOpen
           <button
             onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
             disabled={currentPage === 1}
-            className="inline-flex items-center gap-1 px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-300 text-slate-700 hover:bg-white disabled:opacity-40 disabled:cursor-not-allowed"
+            className="inline-flex items-center gap-1 px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-300 text-slate-700 hover:bg-white hover:border-slate-400 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Anterior</span>
@@ -358,9 +358,9 @@ export const CommercialDeckModal: React.FC<CommercialDeckModalProps> = ({ isOpen
               <button
                 key={s.page}
                 onClick={() => setCurrentPage(s.page)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
                   currentPage === s.page
-                    ? 'w-6 bg-orange-500'
+                    ? 'w-6 bg-orange-500 shadow-sm shadow-orange-500/40'
                     : 'bg-slate-300 hover:bg-slate-400'
                 }`}
                 aria-label={`Ir para slide ${s.page}`}
@@ -371,7 +371,7 @@ export const CommercialDeckModal: React.FC<CommercialDeckModalProps> = ({ isOpen
           <button
             onClick={() => setCurrentPage((p) => Math.min(11, p + 1))}
             disabled={currentPage === 11}
-            className="inline-flex items-center gap-1 px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-sky-900 text-white hover:bg-sky-800 disabled:opacity-40 disabled:cursor-not-allowed"
+            className="inline-flex items-center gap-1 px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-sky-900 text-white hover:bg-sky-800 hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
             <span>Próximo</span>
             <ChevronRight className="w-4 h-4" />

@@ -94,14 +94,14 @@ export const ServicesSection: React.FC = () => {
                 href={getWhatsAppServiceUrl(service.title)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] group/btn ${
                   index === 0
-                    ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-md shadow-orange-500/20'
-                    : 'bg-slate-900 hover:bg-slate-800 text-white'
+                    ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30'
+                    : 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm hover:shadow-md'
                 }`}
               >
                 <span>Solicitar Orçamento</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </a>
             </div>
           ))}

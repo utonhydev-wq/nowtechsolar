@@ -23,7 +23,7 @@ export const LocationSection: React.FC = () => {
         {/* Location & Contact Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           {/* Address Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover:border-sky-300/80 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mb-5">
                 <MapPin className="w-6 h-6" />
@@ -51,7 +51,7 @@ export const LocationSection: React.FC = () => {
           </div>
 
           {/* Phone Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover:border-sky-300/80 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center mb-5">
                 <Phone className="w-6 h-6" />
@@ -79,7 +79,7 @@ export const LocationSection: React.FC = () => {
           </div>
 
           {/* Email Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 hover:border-sky-300/80 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-5">
                 <Mail className="w-6 h-6" />

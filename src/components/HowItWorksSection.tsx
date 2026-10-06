@@ -80,7 +80,7 @@ export const HowItWorksSection: React.FC = () => {
             {COMPANY_INFO.processStages.map((stage, idx) => (
               <div
                 key={stage.step}
-                className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-orange-300 transition-all flex flex-col justify-between relative group"
+                className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-orange-300/90 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between relative group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

@@ -6,14 +6,14 @@ export const MobileStickyBar: React.FC = () => {
   return (
     <aside 
       aria-label="Atendimento rápido no WhatsApp" 
-      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-slate-950/95 backdrop-blur-md border-t border-sky-900/60 shadow-2xl safe-area-bottom"
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 px-3 pt-2.5 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] bg-slate-950/95 backdrop-blur-md border-t border-sky-900/60 shadow-2xl"
     >
       <div className="max-w-md mx-auto">
         <a
           href={COMPANY_INFO.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-between px-5 py-3 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-black text-sm shadow-lg shadow-orange-500/25 active:scale-[0.98] transition-all"
+          className="flex items-center justify-between px-4 sm:px-5 py-3 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-black text-sm shadow-lg shadow-orange-500/25 active:scale-[0.98] transition-all duration-200"
         >
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center animate-pulse">

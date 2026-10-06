@@ -70,19 +70,19 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenDeck }) => {
           ))}
           <button
             onClick={onOpenDeck}
-            className="text-xs font-semibold text-sky-400 hover:text-sky-300 bg-sky-950/60 border border-sky-700/50 hover:border-sky-500 px-2.5 py-1 rounded transition-colors"
+            className="text-xs font-semibold text-sky-300 hover:text-white bg-sky-950/70 hover:bg-sky-900/80 border border-sky-600/50 hover:border-sky-400 px-3 py-1.5 rounded-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
           >
             Apresentação
           </button>
         </nav>
 
         {/* Zone 3: Primary Action Button */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3">
           <a
             href={COMPANY_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-full shadow-md shadow-orange-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
+            className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-full shadow-md shadow-orange-500/25 transition-all duration-200 hover:shadow-lg hover:shadow-orange-500/35 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] whitespace-nowrap"
           >
             <MessageCircle className="w-4 h-4" />
             <span className="hidden sm:inline">Solicitar Orçamento</span>

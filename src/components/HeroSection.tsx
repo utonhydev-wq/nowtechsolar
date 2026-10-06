@@ -43,7 +43,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
             href={COMPANY_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-4.5 text-base sm:text-lg font-bold text-white bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 rounded-2xl shadow-xl shadow-orange-500/30 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-4.5 text-base sm:text-lg font-bold text-white bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 rounded-2xl shadow-xl shadow-orange-500/30 transition-all duration-200 hover:shadow-2xl hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] group"
           >
             <Sun className="w-6 h-6 text-white group-hover:rotate-45 transition-transform duration-300" />
             <span>SOLICITAR ORÇAMENTO</span>
@@ -58,33 +58,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
 
         {/* Trust Badges Bar */}
         <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto pt-6 border-t border-sky-900/40 text-left">
-          <div className="bg-slate-900/60 border border-sky-900/50 rounded-xl p-2.5 sm:p-3 flex items-center gap-2 sm:gap-3">
+          <div className="bg-slate-900/60 hover:bg-slate-900/80 border border-sky-900/50 hover:border-sky-700/60 rounded-xl p-2.5 sm:p-3 flex items-center gap-2 sm:gap-3 transition-all duration-200 hover:-translate-y-0.5">
             <div className="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0">
               <TrendingDown className="w-4 h-4" />
             </div>
-            <div>
-              <div className="text-xs sm:text-sm font-bold text-white">Até 95%</div>
-              <div className="text-[10px] sm:text-xs text-slate-400">Economia na conta</div>
+            <div className="min-w-0">
+              <div className="text-xs sm:text-sm font-bold text-white truncate">Até 95%</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">Economia na conta</div>
             </div>
           </div>
 
-          <div className="bg-slate-900/60 border border-sky-900/50 rounded-xl p-2.5 sm:p-3 flex items-center gap-2 sm:gap-3">
+          <div className="bg-slate-900/60 hover:bg-slate-900/80 border border-sky-900/50 hover:border-sky-700/60 rounded-xl p-2.5 sm:p-3 flex items-center gap-2 sm:gap-3 transition-all duration-200 hover:-translate-y-0.5">
             <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-4 h-4" />
             </div>
-            <div>
-              <div className="text-xs sm:text-sm font-bold text-white">Equipe</div>
-              <div className="text-[10px] sm:text-xs text-slate-400">Especializada</div>
+            <div className="min-w-0">
+              <div className="text-xs sm:text-sm font-bold text-white truncate">Equipe</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">Especializada</div>
             </div>
           </div>
 
-          <div className="bg-slate-900/60 border border-sky-900/50 rounded-xl p-2.5 sm:p-3 flex items-center gap-2 sm:gap-3">
+          <div className="bg-slate-900/60 hover:bg-slate-900/80 border border-sky-900/50 hover:border-sky-700/60 rounded-xl p-2.5 sm:p-3 flex items-center gap-2 sm:gap-3 transition-all duration-200 hover:-translate-y-0.5">
             <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
               <Zap className="w-4 h-4" />
             </div>
-            <div>
-              <div className="text-xs sm:text-sm font-bold text-white">Durabilidade</div>
-              <div className="text-[10px] sm:text-xs text-slate-400">Garantia estendida</div>
+            <div className="min-w-0">
+              <div className="text-xs sm:text-sm font-bold text-white truncate">Durabilidade</div>
+              <div className="text-[10px] sm:text-xs text-slate-400 truncate">Garantia estendida</div>
             </div>
           </div>
         </div>

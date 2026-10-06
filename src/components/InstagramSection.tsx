@@ -46,7 +46,7 @@ export const InstagramSection: React.FC = () => {
                 href={COMPANY_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 rounded-2xl shadow-xl shadow-rose-900/30 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] group"
+                className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 rounded-2xl shadow-xl shadow-rose-900/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-rose-900/40 active:translate-y-0 active:scale-[0.98] group"
               >
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>SEGUIR NO INSTAGRAM</span>

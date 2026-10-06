@@ -72,10 +72,10 @@ export const SavingsCalculator: React.FC = () => {
                 <button
                   key={p.id}
                   onClick={() => setPropertyType(p.id)}
-                  className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-150 ${
+                  className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] ${
                     propertyType === p.id
                       ? 'bg-sky-900 text-white shadow-md shadow-sky-950/20'
-                      : 'bg-slate-100 hover:bg-slate-200/80 text-slate-700'
+                      : 'bg-slate-100 hover:bg-slate-200/90 text-slate-700'
                   }`}
                 >
                   <span>{p.icon}</span>
@@ -119,9 +119,9 @@ export const SavingsCalculator: React.FC = () => {
                     setBillAmount(val);
                     handleCelebrate();
                   }}
-                  className={`text-xs px-2.5 py-1 rounded-lg transition-colors font-medium tabular-nums ${
+                  className={`text-xs px-2.5 py-1 rounded-lg transition-all duration-150 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] font-medium tabular-nums ${
                     billAmount === val
-                      ? 'bg-orange-500 text-white font-bold'
+                      ? 'bg-orange-500 text-white font-bold shadow-sm shadow-orange-500/30'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
@@ -184,9 +184,9 @@ export const SavingsCalculator: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCelebrate}
-            className="w-full flex items-center justify-center gap-2 py-4 px-6 text-sm sm:text-base font-extrabold text-white bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 rounded-xl shadow-lg shadow-orange-500/30 transition-all hover:scale-[1.01] active:scale-[0.99] group"
+            className="w-full flex items-center justify-center gap-2 py-4 px-6 text-sm sm:text-base font-extrabold text-white bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 rounded-xl shadow-lg shadow-orange-500/30 transition-all duration-200 hover:shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] group"
           >
-            <Sun className="w-5 h-5 group-hover:rotate-45 transition-transform" />
+            <Sun className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
             <span>SOLICITAR PROJETO COM ESSA ECONOMIA</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
