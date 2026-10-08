@@ -1,6 +1,7 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/companyData';
-import { MessageCircle, Calculator, FileText, Instagram, MapPin, Sparkles, ArrowRight } from 'lucide-react';
+import { MessageCircle, Calculator, FileText, Instagram, Youtube, MapPin, Sparkles, ArrowRight } from 'lucide-react';
+import { TikTokIcon } from './icons/TikTokIcon';
 
 interface QuickBioLinksProps {
   onOpenDeck: () => void;
@@ -90,7 +91,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
           <span className="text-xs font-semibold px-2.5 py-1 bg-amber-100 text-amber-800 rounded-lg">Ver PDF</span>
         </button>
 
-        {/* Link 5 & 6: Instagram & Location in 2 columns */}
+        {/* Links 5, 6, 7 & 8: Socials & Location in 2x2 grid */}
         <div className="grid grid-cols-2 gap-2.5 pt-1">
           <a
             href={COMPANY_INFO.instagramUrl}
@@ -108,12 +109,42 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
           </a>
 
           <a
+            href={COMPANY_INFO.youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2.5 p-3 rounded-xl bg-red-50/70 border border-red-200/70 hover:border-red-300 text-slate-800 text-xs sm:text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
+          >
+            <div className="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+              <Youtube className="w-4 h-4" />
+            </div>
+            <div className="truncate">
+              <div className="font-extrabold truncate">YouTube</div>
+              <div className="text-[11px] text-slate-500 font-medium truncate">{COMPANY_INFO.youtubeHandle}</div>
+            </div>
+          </a>
+
+          <a
+            href={COMPANY_INFO.tiktokUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2.5 p-3 rounded-xl bg-slate-100/90 border border-slate-300/80 hover:border-slate-400 text-slate-800 text-xs sm:text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
+          >
+            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0 shadow-sm">
+              <TikTokIcon className="w-4 h-4 text-white" />
+            </div>
+            <div className="truncate">
+              <div className="font-extrabold truncate">TikTok</div>
+              <div className="text-[11px] text-slate-500 font-medium truncate">{COMPANY_INFO.tiktokHandle}</div>
+            </div>
+          </a>
+
+          <a
             href={COMPANY_INFO.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2.5 p-3 rounded-xl bg-emerald-50/60 border border-emerald-200/70 hover:border-emerald-300 text-slate-800 text-xs sm:text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm"
           >
-            <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
               <MapPin className="w-4 h-4" />
             </div>
             <div className="truncate">

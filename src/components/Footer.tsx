@@ -1,6 +1,7 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/companyData';
-import { Instagram, MessageCircle, MapPin, Phone, Mail, FileText, ArrowUpRight, Sun } from 'lucide-react';
+import { Instagram, Youtube, MessageCircle, MapPin, Phone, Mail, FileText, ArrowUpRight, Sun } from 'lucide-react';
+import { TikTokIcon } from './icons/TikTokIcon';
 import footerLogo from '../assets/images/regenerated_image_1791297333794.jpg';
 
 interface FooterProps {
@@ -50,6 +51,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeck }) => {
                 aria-label="Instagram NowTech"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+
+              <a
+                href={COMPANY_INFO.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white flex items-center justify-center transition-all duration-200 border border-red-500/30 hover:-translate-y-1 hover:shadow-md hover:shadow-red-500/20 active:translate-y-0"
+                aria-label="YouTube NowTech"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+
+              <a
+                href={COMPANY_INFO.tiktokUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-slate-900 text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700 hover:border-slate-500 hover:-translate-y-1 hover:shadow-md hover:shadow-cyan-500/20 active:translate-y-0"
+                aria-label="TikTok NowTech"
+              >
+                <TikTokIcon className="w-5 h-5" />
               </a>
 
               <a

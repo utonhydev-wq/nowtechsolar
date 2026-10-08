@@ -19,6 +19,10 @@ export const COMPANY_INFO = {
   defaultWhatsAppMessage: "Olá! Vi a NowTech Energia Solar pelo Instagram e gostaria de saber mais sobre energia solar e solicitar um orçamento. ☀️⚡",
   instagramUrl: "https://www.instagram.com/nowtechsolar?stkn=MXJkdXE0cHc3Mjc0cA==",
   instagramHandle: "@nowtechsolar",
+  youtubeUrl: "https://www.youtube.com/@NowTechSolar",
+  youtubeHandle: "@NowTechSolar",
+  tiktokUrl: "https://www.tiktok.com/@nowtechsolar",
+  tiktokHandle: "@nowtechsolar",
   mapsUrl: "https://maps.app.goo.gl/9UVbRWnSHEJwj31V8?g_st=ac",
   
   // Contact details from deck (page 11)

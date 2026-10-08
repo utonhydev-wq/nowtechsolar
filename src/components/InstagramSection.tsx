@@ -1,6 +1,7 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/companyData';
-import { Instagram, ArrowUpRight, Sparkles, Sun, CheckCircle2 } from 'lucide-react';
+import { Instagram, Youtube, ArrowUpRight, Sparkles, Sun, CheckCircle2 } from 'lucide-react';
+import { TikTokIcon } from './icons/TikTokIcon';
 
 export const InstagramSection: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ export const InstagramSection: React.FC = () => {
               </p>
 
               {/* Instagram Handle & Verified Badge */}
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shadow-lg">
                   <Instagram className="w-6 h-6" />
                 </div>
@@ -37,6 +38,31 @@ export const InstagramSection: React.FC = () => {
                   </div>
                   <div className="text-xs text-slate-400 font-medium">NowTech Energia Solar no Instagram</div>
                 </div>
+              </div>
+
+              {/* YouTube & TikTok Channels */}
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 mb-6">
+                <a
+                  href={COMPANY_INFO.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 text-white text-xs font-semibold transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <Youtube className="w-4 h-4 text-red-400" />
+                  <span>YouTube: {COMPANY_INFO.youtubeHandle}</span>
+                  <ArrowUpRight className="w-3 h-3 text-red-300" />
+                </a>
+
+                <a
+                  href={COMPANY_INFO.tiktokUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-white text-xs font-semibold transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <TikTokIcon className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>TikTok: {COMPANY_INFO.tiktokHandle}</span>
+                  <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                </a>
               </div>
             </div>
 
