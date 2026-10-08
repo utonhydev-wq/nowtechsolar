@@ -38,9 +38,9 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
           <ArrowRight className="w-5 h-5 text-white/80 group-hover:translate-x-1 transition-transform shrink-0" />
         </a>
 
-        {/* Link 2: Talk to Specialist */}
+        {/* Link 2: Central de Atendimento */}
         <a
-          href={COMPANY_INFO.whatsappUrl}
+          href={COMPANY_INFO.centralAtendimentoWhatsAppUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.99]"
@@ -50,8 +50,8 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
               <MessageCircle className="w-5 h-5" />
             </div>
             <div className="text-left">
-              <div className="text-sm sm:text-base font-extrabold leading-tight">FALAR COM UM ESPECIALISTA</div>
-              <div className="text-xs text-slate-300 font-medium">Tire dúvidas sobre seu imóvel</div>
+              <div className="text-sm sm:text-base font-extrabold leading-tight">CENTRAL DE ATENDIMENTO</div>
+              <div className="text-xs text-slate-300 font-medium">Fale conosco no WhatsApp</div>
             </div>
           </div>
           <ArrowRight className="w-5 h-5 text-sky-400 group-hover:translate-x-1 transition-transform shrink-0" />

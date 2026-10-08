@@ -16,6 +16,7 @@ export const COMPANY_INFO = {
   
   // Official Links
   whatsappUrl: "https://w.app/nowtechsolar",
+  centralAtendimentoWhatsAppUrl: "https://wa.link/fpn0cs",
   defaultWhatsAppMessage: "Olá! Vi a NowTech Energia Solar pelo Instagram e gostaria de saber mais sobre energia solar e solicitar um orçamento. ☀️⚡",
   instagramUrl: "https://www.instagram.com/nowtechsolar?stkn=MXJkdXE0cHc3Mjc0cA==",
   instagramHandle: "@nowtechsolar",
