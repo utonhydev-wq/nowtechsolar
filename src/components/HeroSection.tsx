@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { Sun, ArrowRight, ShieldCheck, TrendingDown, MapPin, Zap } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -40,7 +40,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDeck }) => {
         {/* Primary CTA Button with Solar Glow */}
         <div className="flex flex-col items-center gap-3 mb-8">
           <a
-            href={COMPANY_INFO.whatsappUrl}
+            href={getRandomQuoteWhatsAppUrl()}
+            onClick={(e) => {
+              e.currentTarget.href = getRandomQuoteWhatsAppUrl();
+            }}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-4.5 text-base sm:text-lg font-bold text-white bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 rounded-2xl shadow-xl shadow-orange-500/30 transition-all duration-200 hover:shadow-2xl hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] group"

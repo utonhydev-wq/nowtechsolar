@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { MessageCircle, Calculator, FileText, Instagram, Youtube, MapPin, Sparkles, ArrowRight } from 'lucide-react';
 import { TikTokIcon } from './icons/TikTokIcon';
 
@@ -21,7 +21,10 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
 
         {/* Link 1: Primary WhatsApp Solar Quote */}
         <a
-          href={COMPANY_INFO.whatsappUrl}
+          href={getRandomQuoteWhatsAppUrl()}
+          onClick={(e) => {
+            e.currentTarget.href = getRandomQuoteWhatsAppUrl();
+          }}
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold shadow-md shadow-orange-500/20 hover-lift active:scale-[0.99]"

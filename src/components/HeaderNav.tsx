@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
 import headerLogo from '../assets/images/image_49dff514-d49b-452e-8430-d6cc798cd235.png';
 
@@ -79,7 +79,10 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenDeck }) => {
         {/* Zone 3: Primary Action Button */}
         <div className="flex items-center gap-2.5 sm:gap-3">
           <a
-            href={COMPANY_INFO.whatsappUrl}
+            href={getRandomQuoteWhatsAppUrl()}
+            onClick={(e) => {
+              e.currentTarget.href = getRandomQuoteWhatsAppUrl();
+            }}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 rounded-full shadow-md shadow-orange-500/25 transition-all duration-200 hover:shadow-lg hover:shadow-orange-500/35 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] whitespace-nowrap"
@@ -126,10 +129,13 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenDeck }) => {
             </button>
             <div className="pt-2 border-t border-slate-800">
               <a
-                href={COMPANY_INFO.whatsappUrl}
+                href={getRandomQuoteWhatsAppUrl()}
+                onClick={(e) => {
+                  e.currentTarget.href = getRandomQuoteWhatsAppUrl();
+                  setMobileMenuOpen(false);
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-center gap-2 w-full py-3 text-sm font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl shadow-lg shadow-orange-500/30"
               >
                 <MessageCircle className="w-4 h-4" />

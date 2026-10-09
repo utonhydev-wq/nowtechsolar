@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { MessageCircle, ArrowRight, Sun } from 'lucide-react';
 
 export const MobileStickyBar: React.FC = () => {
@@ -10,7 +10,10 @@ export const MobileStickyBar: React.FC = () => {
     >
       <div className="max-w-md mx-auto">
         <a
-          href={COMPANY_INFO.whatsappUrl}
+          href={getRandomQuoteWhatsAppUrl()}
+          onClick={(e) => {
+            e.currentTarget.href = getRandomQuoteWhatsAppUrl();
+          }}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-between px-4 sm:px-5 py-3 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-black text-sm shadow-lg shadow-orange-500/25 active:scale-[0.98] transition-all duration-200"

@@ -16,6 +16,10 @@ export const COMPANY_INFO = {
   
   // Official Links
   whatsappUrl: "https://w.app/nowtechsolar",
+  quoteWhatsAppLinks: [
+    "https://w.app/ntxzlt",
+    "https://w.app/nowtechsolar",
+  ],
   centralAtendimentoWhatsAppUrl: "https://wa.link/fpn0cs",
   defaultWhatsAppMessage: "Olá! Vi a NowTech Energia Solar pelo Instagram e gostaria de saber mais sobre energia solar e solicitar um orçamento. ☀️⚡",
   instagramUrl: "https://www.instagram.com/nowtechsolar?stkn=MXJkdXE0cHc3Mjc0cA==",
@@ -219,4 +223,14 @@ export const COMPANY_INFO = {
     { page: 10, title: "O Futuro da Energia Solar", desc: "Parcerias estratégicas, crescimento sustentável e inovação constante." },
     { page: 11, title: "Contato & Localização", desc: "Jaboatão dos Guararapes / PE, Telefone (81) 99601-3352 e E-mail." }
   ]
+};
+
+/**
+ * Returns randomly one of the two official WhatsApp quote links:
+ * 1. https://w.app/ntxzlt
+ * 2. https://w.app/nowtechsolar
+ */
+export const getRandomQuoteWhatsAppUrl = (): string => {
+  const links = COMPANY_INFO.quoteWhatsAppLinks;
+  return links[Math.floor(Math.random() * links.length)];
 };
