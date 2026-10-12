@@ -24,7 +24,7 @@ export const COMPANY_INFO = {
     "https://wa.me/5581979107841?text=" + encodeURIComponent("Olá! Gostaria de saber mais sobre energia solar e solicitar um orçamento com a NowTech. ☀️⚡"),
     "https://wa.me/5581985664169?text=" + encodeURIComponent("Olá! Gostaria de saber mais sobre energia solar e solicitar um orçamento com a NowTech. ☀️⚡"),
   ],
-  centralAtendimentoWhatsAppUrl: "https://wa.link/fpn0cs",
+  centralAtendimentoWhatsAppUrl: "https://wa.me/5581996013352?text=" + encodeURIComponent("Olá! Gostaria de falar com a Central de Atendimento da NowTech Solar. ☀️⚡"),
   defaultWhatsAppMessage: "Olá! Vi a NowTech Energia Solar pelo Instagram e gostaria de saber mais sobre energia solar e solicitar um orçamento. ☀️⚡",
   instagramUrl: "https://www.instagram.com/nowtechsolar?stkn=MXJkdXE0cHc3Mjc0cA==",
   instagramHandle: "@nowtechsolar",

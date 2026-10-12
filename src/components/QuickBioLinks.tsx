@@ -54,7 +54,7 @@ export const QuickBioLinks: React.FC<QuickBioLinksProps> = ({ onOpenDeck, onScro
             </div>
             <div className="text-left">
               <div className="text-sm sm:text-base font-extrabold leading-tight">CENTRAL DE ATENDIMENTO</div>
-              <div className="text-xs text-slate-300 font-medium">Fale conosco no WhatsApp</div>
+              <div className="text-xs text-slate-300 font-medium">Fale conosco: (81) 99601-3352</div>
             </div>
           </div>
           <ArrowRight className="w-5 h-5 text-sky-400 group-hover:translate-x-1 transition-transform shrink-0" />
