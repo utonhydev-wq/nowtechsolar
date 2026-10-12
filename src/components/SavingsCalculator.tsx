@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { Calculator, ArrowRight, Sparkles, CheckCircle2, TrendingDown, Sun } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -28,10 +28,8 @@ export const SavingsCalculator: React.FC = () => {
   };
 
   const getWhatsAppSimulatedUrl = () => {
-    const text = encodeURIComponent(
-      `Olá! Simulei minha conta no site da NowTech Solar:\n• Tipo: ${propertyType.toUpperCase()}\n• Conta atual: R$ ${billAmount.toLocaleString('pt-BR')}/mês\n• Economia estimada de até: R$ ${monthlySavings.toLocaleString('pt-BR')}/mês\n\nGostaria de solicitar um orçamento personalizado! ☀️⚡`
-    );
-    return `${COMPANY_INFO.whatsappUrl}?text=${text}`;
+    const text = `Olá! Simulei minha conta no site da NowTech Solar:\n• Tipo: ${propertyType.toUpperCase()}\n• Conta atual: R$ ${billAmount.toLocaleString('pt-BR')}/mês\n• Economia estimada de até: R$ ${monthlySavings.toLocaleString('pt-BR')}/mês\n\nGostaria de solicitar um orçamento personalizado! ☀️⚡`;
+    return getRandomQuoteWhatsAppUrl(text);
   };
 
   const presets = [250, 450, 650, 1200, 2500, 5000];
@@ -183,7 +181,10 @@ export const SavingsCalculator: React.FC = () => {
             href={getWhatsAppSimulatedUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={handleCelebrate}
+            onClick={(e) => {
+              handleCelebrate();
+              e.currentTarget.href = getWhatsAppSimulatedUrl();
+            }}
             className="w-full flex items-center justify-center gap-2 py-4 px-6 text-sm sm:text-base font-extrabold text-white bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 rounded-xl shadow-lg shadow-orange-500/30 transition-all duration-200 hover:shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] group"
           >
             <Sun className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />

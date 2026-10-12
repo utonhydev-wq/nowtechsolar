@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { Home, Building2, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const ServicesSection: React.FC = () => {
@@ -15,10 +15,8 @@ export const ServicesSection: React.FC = () => {
   };
 
   const getWhatsAppServiceUrl = (serviceTitle: string) => {
-    const text = encodeURIComponent(
-      `Olá! Tenho interesse no serviço de: "${serviceTitle}" da NowTech Energia Solar. Gostaria de solicitar um orçamento e tirar dúvidas! ☀️⚡`
-    );
-    return `${COMPANY_INFO.whatsappUrl}?text=${text}`;
+    const text = `Olá! Tenho interesse no serviço de: "${serviceTitle}" da NowTech Energia Solar. Gostaria de solicitar um orçamento e tirar dúvidas! ☀️⚡`;
+    return getRandomQuoteWhatsAppUrl(text);
   };
 
   return (

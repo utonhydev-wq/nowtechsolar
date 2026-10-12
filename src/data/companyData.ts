@@ -15,10 +15,14 @@ export const COMPANY_INFO = {
   commercialCoverUrl: "/nowtech_commercial_cover.png",
   
   // Official Links
-  whatsappUrl: "https://w.app/nowtechsolar",
+  whatsappUrl: "https://wa.me/5581979107841?text=" + encodeURIComponent("Olá! Gostaria de saber mais sobre energia solar e solicitar um orçamento com a NowTech. ☀️⚡"),
+  quotePhones: [
+    { number: "81979107841", raw: "5581979107841", formatted: "(81) 97910-7841" },
+    { number: "81985664169", raw: "5581985664169", formatted: "(81) 98566-4169" },
+  ],
   quoteWhatsAppLinks: [
-    "https://w.app/ntxzlt",
-    "https://w.app/nowtechsolar",
+    "https://wa.me/5581979107841?text=" + encodeURIComponent("Olá! Gostaria de saber mais sobre energia solar e solicitar um orçamento com a NowTech. ☀️⚡"),
+    "https://wa.me/5581985664169?text=" + encodeURIComponent("Olá! Gostaria de saber mais sobre energia solar e solicitar um orçamento com a NowTech. ☀️⚡"),
   ],
   centralAtendimentoWhatsAppUrl: "https://wa.link/fpn0cs",
   defaultWhatsAppMessage: "Olá! Vi a NowTech Energia Solar pelo Instagram e gostaria de saber mais sobre energia solar e solicitar um orçamento. ☀️⚡",
@@ -226,11 +230,21 @@ export const COMPANY_INFO = {
 };
 
 /**
- * Returns randomly one of the two official WhatsApp quote links:
- * 1. https://w.app/ntxzlt
- * 2. https://w.app/nowtechsolar
+ * Returns randomly one of the two official WhatsApp quote phones:
+ * Telefone 1: 81979107841 (5581979107841)
+ * Telefone 2: 81985664169 (5581985664169)
  */
-export const getRandomQuoteWhatsAppUrl = (): string => {
-  const links = COMPANY_INFO.quoteWhatsAppLinks;
-  return links[Math.floor(Math.random() * links.length)];
+export const getRandomQuotePhone = (): string => {
+  const phones = ["5581979107841", "5581985664169"];
+  return phones[Math.floor(Math.random() * phones.length)];
+};
+
+/**
+ * Generates randomly a WhatsApp link to one of the two quote numbers
+ * (telefone 1: 81979107841 ou telefone 2: 81985664169)
+ */
+export const getRandomQuoteWhatsAppUrl = (customText?: string): string => {
+  const phone = getRandomQuotePhone();
+  const text = customText || "Olá! Gostaria de saber mais sobre energia solar e solicitar um orçamento com a NowTech. ☀️⚡";
+  return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 };
