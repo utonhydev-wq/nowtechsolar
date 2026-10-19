@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
+import { COMPANY_INFO, getRandomQuotePhone } from '../data/companyData';
 import { Calculator, ArrowRight, Sparkles, CheckCircle2, TrendingDown, Sun } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -28,8 +28,28 @@ export const SavingsCalculator: React.FC = () => {
   };
 
   const getWhatsAppSimulatedUrl = () => {
-    const text = `Olá! Simulei minha conta no site da NowTech Solar:\n• Tipo: ${propertyType.toUpperCase()}\n• Conta atual: R$ ${billAmount.toLocaleString('pt-BR')}/mês\n• Economia estimada de até: R$ ${monthlySavings.toLocaleString('pt-BR')}/mês\n\nGostaria de solicitar um orçamento personalizado! ☀️⚡`;
-    return getRandomQuoteWhatsAppUrl(text);
+    const propertyLabels: Record<string, string> = {
+      residencial: 'Residencial 🏡',
+      comercial: 'Comercial 🏢',
+      industrial: 'Industrial 🏭',
+      rural: 'Rural 🚜',
+    };
+    const propLabel = propertyLabels[propertyType] || propertyType.toUpperCase();
+
+    const text =
+      `*SOLICITAÇÃO DE PROJETO COM ECONOMIA* ☀️⚡\n\n` +
+      `Olá, equipe NowTech Solar! Realizei uma simulação de economia no site:\n\n` +
+      `• *Perfil do imóvel:* ${propLabel}\n` +
+      `• *Conta de luz atual:* R$ ${billAmount.toLocaleString('pt-BR')}/mês\n` +
+      `• *Economia mensal estimada:* ~R$ ${monthlySavings.toLocaleString('pt-BR')}/mês (até 95%)\n` +
+      `• *Nova conta estimada:* ~R$ ${newEstimatedBill.toLocaleString('pt-BR')}/mês\n` +
+      `• *Economia em 1 ano:* ~R$ ${yearlySavings.toLocaleString('pt-BR')}\n` +
+      `• *Economia em 25 anos:* ~R$ ${twentyFiveYearSavings.toLocaleString('pt-BR')}\n\n` +
+      `Gostaria de solicitar um projeto personalizado com essa economia!`;
+
+    // Sorteia aleatoriamente um dos dois telefones do "Solicitar Orçamento" (81979107841 ou 81985664169)
+    const phone = getRandomQuotePhone();
+    return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   };
 
   const presets = [250, 450, 650, 1200, 2500, 5000];
@@ -181,6 +201,12 @@ export const SavingsCalculator: React.FC = () => {
             href={getWhatsAppSimulatedUrl()}
             target="_blank"
             rel="noopener noreferrer"
+            onMouseEnter={(e) => {
+              e.currentTarget.href = getWhatsAppSimulatedUrl();
+            }}
+            onTouchStart={(e) => {
+              e.currentTarget.href = getWhatsAppSimulatedUrl();
+            }}
             onClick={(e) => {
               handleCelebrate();
               e.currentTarget.href = getWhatsAppSimulatedUrl();
