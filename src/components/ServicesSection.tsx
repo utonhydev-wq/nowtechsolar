@@ -1,6 +1,7 @@
 import React from 'react';
 import { COMPANY_INFO, getRandomQuoteWhatsAppUrl } from '../data/companyData';
 import { Home, Building2, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { PostsCarousel } from './PostsCarousel';
 
 export const ServicesSection: React.FC = () => {
   const getIcon = (name: string) => {
@@ -20,8 +21,11 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="solucoes" className="py-16 sm:py-24 px-4 bg-slate-50 relative overflow-hidden">
+    <section id="solucoes" className="py-12 sm:py-20 px-4 bg-slate-50 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
+        {/* Carrossel Automático de Posts — NowTech Solar */}
+        <PostsCarousel />
+
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full uppercase tracking-wider mb-3">
